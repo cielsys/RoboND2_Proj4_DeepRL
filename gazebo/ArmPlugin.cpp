@@ -53,7 +53,7 @@
 #define REWARD_LOSS -0.0f
 
 // Define Object Names
-#define WORLD_NAME "arm_world"
+//#define WORLD_NAME "arm_world"
 #define PROP_NAME  "tube"
 #define GRIP_NAME  "gripper_middle"
 
@@ -66,7 +66,7 @@
 #define ANIMATION_STEPS 1000
 
 // Set Debug Mode
-#define DEBUG false
+#define DEBUG true
 
 // Lock base rotation DOF (Add dof in header file if off)
 #define LOCKBASE true
@@ -134,23 +134,22 @@ void ArmPlugin::Load(physics::ModelPtr _parent, sdf::ElementPtr /*_sdf*/)
 	cameraNode->Init();
 	
 	/*
-	/ TODO - Subscribe to camera topic
+	/ xTODO - Subscribe to camera topic
 	/
 	*/
-	
-	//cameraSub = None;
+  cameraSub = cameraNode->Subscribe("/gazebo/arm_world/camera/link/camera/image", &ArmPlugin::onCameraMsg, this);
 
-	// Create our node for collision detection
+  // Create our node for collision detection
 	collisionNode->Init();
 		
 	/*
-	/ TODO - Subscribe to prop collision topic
+	/ xTODO - Subscribe to prop collision topic
 	/
 	*/
 	
-	//collisionSub = None;
+	collisionSub = collisionNode->Subscribe("/gazebo/arm_world/tube/tube_link/my_contact", &ArmPlugin::onCollisionMsg, this);
 
-	// Listen to the update event. This event is broadcast every simulation iteration.
+  // Listen to the update event. This event is broadcast every simulation iteration.
 	this->updateConnection = event::Events::ConnectWorldUpdateBegin(boost::bind(&ArmPlugin::OnUpdate, this, _1));
 }
 
@@ -163,13 +162,16 @@ bool ArmPlugin::createAgent()
 
 			
 	/*
-	/ TODO - Create DQN Agent
+	/ xTODO - Create DQN Agent
 	/
 	*/
-	
-	agent = NULL;
 
-	if( !agent )
+  agent = dqnAgent::Create(INPUT_WIDTH, INPUT_HEIGHT, INPUT_CHANNELS, DOF * 2,
+                           OPTIMIZER, LEARNING_RATE, REPLAY_MEMORY, BATCH_SIZE,
+                           GAMMA, EPS_START, EPS_END, EPS_DECAY,
+                           USE_LSTM, LSTM_SIZE, ALLOW_RANDOM, DEBUG_DQN);
+
+  if( !agent )
 	{
 		printf("ArmPlugin - failed to create DQN agent\n");
 		return false;
