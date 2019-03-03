@@ -24,7 +24,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="900f2fc4-5eab-4f2b-80ae-d6065ba85cdc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gazebo/ArmPlugin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/gazebo/ArmPlugin.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -63,7 +62,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="bash" value="19" />
-          <entry key="cpp" value="20" />
+          <entry key="cpp" value="109" />
           <entry key="gitignore" value="9" />
           <entry key="md" value="191" />
         </counts>
@@ -71,7 +70,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="191" />
-          <entry key="ObjectiveC" value="20" />
+          <entry key="ObjectiveC" value="109" />
           <entry key="PLAIN_TEXT" value="28" />
         </counts>
       </usages-collector>
@@ -82,8 +81,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+            <state relative-caret-position="787">
+              <caret line="318" column="26" selection-start-line="318" selection-start-column="26" selection-end-line="318" selection-end-column="26" />
               <folding>
                 <element signature="e#6761#7484#0" expanded="true" />
               </folding>
@@ -278,12 +277,12 @@
     <frame x="3967" y="0" width="1764" height="1456" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.70264065" visible="true" weight="0.21133412" />
-      <window_info id="Structure" order="1" sideWeight="0.29735935" side_tool="true" visible="true" weight="0.21133412" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7021053" visible="true" weight="0.21133412" />
+      <window_info id="Structure" order="1" sideWeight="0.29789475" side_tool="true" visible="true" weight="0.21133412" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="CMake" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32948422" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.2686682" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -347,8 +346,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+        <state relative-caret-position="787">
+          <caret line="318" column="26" selection-start-line="318" selection-start-column="26" selection-end-line="318" selection-end-column="26" />
           <folding>
             <element signature="e#6761#7484#0" expanded="true" />
           </folding>

@@ -282,6 +282,9 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 }
 
 
+int actionPrevious = -1;
+bool isDifferentAction = false;
+
 // upon recieving a new frame, update the AI agent
 bool ArmPlugin::updateAgent()
 {
@@ -311,7 +314,9 @@ bool ArmPlugin::updateAgent()
 		return false;
 	}
 
-	if(DEBUG){printf("ArmPlugin - agent selected action %i\n", action);}
+  isDifferentAction = (actionPrevious != action);
+  actionPrevious = action;
+	if(isDifferentAction && DEBUG){printf("ArmPlugin - agent selected action %i\n", action);}
 
 
 
