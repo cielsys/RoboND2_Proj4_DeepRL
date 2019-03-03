@@ -86,8 +86,19 @@ $ cd $REPO/build/x86_64/bin
 $ ./gazebo-arm.sh
 ```
 
-
 The plugins which hook the learning into the simulation are located in the `gazebo/` directory of the repo. 
 The RL agent and the reward functions are to be defined in [`ArmPlugin.cpp`](gazebo/ArmPlugin.cpp).
 
 This project is based on the Nvidia open source project "jetson-reinforcement" developed by [Dustin Franklin](https://github.com/dusty-nv). The goal of the project is to create a DQN agent and define reward functions to teach a robotic arm to carry out two primary objectives:
+
+### Common problems
+Missing dependencies during build.
+```sudo apt-get install libignition-math2-dev``` <br/>
+or  <br/>
+```$REPO/bin/freshws.bash```
+
+## Links
+Submission Requirements: [Rubric](https://review.udacity.com/#!/rubrics/1441/view)
+```commandline
+git clone https://github.com/cielsys/RoboND2_Proj4_DeepRL
+``` 
