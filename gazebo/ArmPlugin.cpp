@@ -37,20 +37,20 @@
 
 #define INPUT_WIDTH   64
 #define INPUT_HEIGHT  64
-#define OPTIMIZER "Adam"
+#define OPTIMIZER "RMSprop"
 #define LEARNING_RATE 0.1f
 #define REPLAY_MEMORY 10000
 #define BATCH_SIZE 64
 #define USE_LSTM true
-#define LSTM_SIZE 64
+#define LSTM_SIZE 128
 
 /*
 / TODO - Define Reward Parameters
 /
 */
 
-#define REWARD_WIN  50.0f
-#define REWARD_LOSS -50.0f
+#define REWARD_WIN  300.0f
+#define REWARD_LOSS -300.0f
 
 // Define Object Names
 //#define WORLD_NAME "arm_world"
@@ -271,12 +271,14 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 		if (didSomethingHitTarget && didGripperHit)
 		{
 			rewardHistory = REWARD_WIN;
+			newReward  = true;
+			endEpisode = true;
+			return;
 		} else { // There was some other collision
 			rewardHistory = REWARD_LOSS;
+			newReward  = true;
+			endEpisode = true;
 		}
-		newReward  = true;
-		endEpisode = true;
-		return;
 	}
 }
 
@@ -579,7 +581,7 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 
 		// get the bounding box for the gripper		
 		const math::Box& gripBBox = gripper->GetBoundingBox();
-		const float groundContact = 0.05f;
+		const float groundContact = 0.0f;
 		
 		/*
 		/ TODO - set appropriate Reward for robot hitting the ground.
@@ -610,7 +612,7 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 			if( episodeFrames > 1 )
 			{
 				const float distDelta  = lastGoalDistance - distGoal;
-				const float movingAvgRC  = 0.9f;
+				const float movingAvgRC  = 0.8f;
 
 				// compute the smoothed moving average of the delta of the distance to the goal
 				avgGoalDelta = (avgGoalDelta * movingAvgRC) + (distDelta*(1.0f - movingAvgRC));

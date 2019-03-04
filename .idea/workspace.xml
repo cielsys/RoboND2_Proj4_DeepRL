@@ -66,7 +66,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="bash" value="19" />
-          <entry key="cpp" value="401" />
+          <entry key="cpp" value="416" />
           <entry key="gitignore" value="9" />
           <entry key="md" value="191" />
         </counts>
@@ -74,7 +74,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="191" />
-          <entry key="ObjectiveC" value="401" />
+          <entry key="ObjectiveC" value="416" />
           <entry key="PLAIN_TEXT" value="28" />
         </counts>
       </usages-collector>
@@ -88,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="607" column="8" selection-start-line="607" selection-start-column="8" selection-end-line="607" selection-end-column="8" />
+            <state relative-caret-position="598">
+              <caret line="620" column="9" lean-forward="true" selection-start-line="620" selection-start-column="9" selection-end-line="620" selection-end-column="9" />
               <folding>
                 <element signature="e#6761#7484#0" expanded="true" />
               </folding>
@@ -338,17 +338,6 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp</url>
-          <line>330</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/freshws.bash" />
     <entry file="file:///usr/include/gazebo-7/gazebo/common/Plugin.hh">
@@ -406,8 +395,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="607" column="8" selection-start-line="607" selection-start-column="8" selection-end-line="607" selection-end-column="8" />
+        <state relative-caret-position="598">
+          <caret line="620" column="9" lean-forward="true" selection-start-line="620" selection-start-column="9" selection-end-line="620" selection-end-column="9" />
           <folding>
             <element signature="e#6761#7484#0" expanded="true" />
           </folding>
