@@ -93,7 +93,11 @@ This project is based on the Nvidia open source project "jetson-reinforcement" d
 
 ### Common problems
 Missing dependencies during build.
-```sudo apt-get install libignition-math2-dev``` <br/>
+
+```
+>> /usr/local/include/ignition/math/MassMatrix3.hh:477:19: error: 'IGN_MASSMATRIX3_DEFAULT_TOLERANCE' was not declared in this scope
+sudo apt-get install libignition-math2-dev
+``` <br/>
 or  <br/>
 ```$REPO/bin/freshws.bash```
 

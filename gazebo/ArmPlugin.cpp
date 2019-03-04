@@ -38,11 +38,11 @@
 #define INPUT_WIDTH   64
 #define INPUT_HEIGHT  64
 #define OPTIMIZER "RMSprop"
-#define LEARNING_RATE 0.1f
+#define LEARNING_RATE 0.01f
 #define REPLAY_MEMORY 10000
 #define BATCH_SIZE 64
 #define USE_LSTM true
-#define LSTM_SIZE 128
+#define LSTM_SIZE 256
 
 /*
 / TODO - Define Reward Parameters
