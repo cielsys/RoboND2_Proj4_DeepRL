@@ -615,6 +615,10 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 				// compute the smoothed moving average of the delta of the distance to the goal
 				avgGoalDelta = (avgGoalDelta * movingAvgRC) + (distDelta*(1.0f - movingAvgRC));
 				rewardHistory = avgGoalDelta;
+				if(abs(avgGoalDelta)<0.01f)
+				{
+					rewardHistory += -0.5;
+				}
 				newReward     = true;
 			}
 
@@ -625,7 +629,7 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 	// issue rewards and train DQN
 	if( newReward && agent != NULL )
 	{
-		if(DEBUG){printf("ArmPlugin - issuing reward %f, EOE=%s  %s\n", rewardHistory, endEpisode ? "true" : "false", (rewardHistory > 0.1f) ? "POS+" :(rewardHistory > 0.0f) ? "POS" : (rewardHistory < 0.0f) ? "    NEG" : "       ZERO");}
+		//if(DEBUG){printf("ArmPlugin - issuing reward %f, EOE=%s  %s\n", rewardHistory, endEpisode ? "true" : "false", (rewardHistory > 0.1f) ? "POS+" :(rewardHistory > 0.0f) ? "POS" : (rewardHistory < 0.0f) ? "    NEG" : "       ZERO");}
 		agent->NextReward(rewardHistory, endEpisode);
 
 		// reset reward indicator
