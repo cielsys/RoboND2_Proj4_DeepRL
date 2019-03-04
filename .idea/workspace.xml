@@ -66,7 +66,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="bash" value="19" />
-          <entry key="cpp" value="252" />
+          <entry key="cpp" value="324" />
           <entry key="gitignore" value="9" />
           <entry key="md" value="191" />
         </counts>
@@ -74,7 +74,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="191" />
-          <entry key="ObjectiveC" value="252" />
+          <entry key="ObjectiveC" value="324" />
           <entry key="PLAIN_TEXT" value="28" />
         </counts>
       </usages-collector>
@@ -88,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="105" column="26" lean-forward="true" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
+            <state relative-caret-position="630">
+              <caret line="282" column="1" lean-forward="true" selection-start-line="282" selection-start-column="1" selection-end-line="282" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -165,8 +165,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="3967" />
-    <option name="width" value="1764" />
+    <option name="x" value="3494" />
+    <option name="width" value="2237" />
     <option name="height" value="1456" />
   </component>
   <component name="ProjectView">
@@ -305,15 +305,15 @@
     </list>
   </component>
   <component name="ToolWindowManager">
-    <frame x="3967" y="0" width="1764" height="1456" extended-state="0" />
+    <frame x="3494" y="0" width="2237" height="1456" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7021053" visible="true" weight="0.21133412" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7021053" visible="true" weight="0.16520536" />
       <window_info id="Structure" order="1" sideWeight="0.29789475" side_tool="true" weight="0.21133412" />
-      <window_info id="Favorites" order="2" sideWeight="0.29789475" side_tool="true" visible="true" weight="0.21133412" />
+      <window_info id="Favorites" order="2" sideWeight="0.29789475" side_tool="true" visible="true" weight="0.16520536" />
       <window_info anchor="bottom" id="CMake" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.2686682" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.2686682" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -340,7 +340,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp</url>
-          <line>331</line>
+          <line>332</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -403,8 +403,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="105" column="26" lean-forward="true" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
+        <state relative-caret-position="630">
+          <caret line="282" column="1" lean-forward="true" selection-start-line="282" selection-start-column="1" selection-end-line="282" selection-end-column="1" />
         </state>
       </provider>
     </entry>

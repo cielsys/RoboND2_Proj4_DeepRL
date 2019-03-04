@@ -264,20 +264,21 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 		/ TODO - Check if there is collision between the arm and object, then issue learning reward
 		/
 		*/
-		
-		/*
-		
-		if (collisionCheck)
+
+		const bool didArmHitTarget = (strcmp(contacts->contact(i).collision1().c_str(), COLLISION_ITEM) == 0);
+		// (strcmp(contacts->contact(i).collision2().c_str(), COLLISION_POINT) == 0);
+
+		if (didArmHitTarget)
 		{
-			rewardHistory = None;
-
-			newReward  = None;
-			endEpisode = None;
-
-			return;
+			rewardHistory = REWARD_WIN;
+			newReward  = true;
+			endEpisode = true;
+		} else { // There was some other collision
+			rewardHistory = REWARD_WIN;
+			newReward  = true;
+			endEpisode = true;
 		}
-		*/
-		
+		return;
 	}
 }
 
@@ -357,13 +358,13 @@ bool ArmPlugin::updateAgent()
 #else
 	
 	/*
-	/ TODO - Increase or decrease the joint position based on whether the action is even or odd
+	/ xTODO - Increase or decrease the joint position based on whether the action is even or odd
 	/
 	*/
 	const int jointIndex = action / 2;
 	float curJointAngle = ref[jointIndex];
 	const int actionDir = ((action % 2 == 0) ? 1 : -1); // 1=even, -1=odd
-	float joint = curJointAngle + actionJointDelta * actionDir; // TODO - Set joint position based on whether action is even or odd.
+	float joint = curJointAngle + actionJointDelta * actionDir;
 
 	// limit the joint to the specified range
 	if( joint < JOINT_MIN )
