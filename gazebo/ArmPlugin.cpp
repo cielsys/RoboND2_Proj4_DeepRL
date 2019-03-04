@@ -24,7 +24,7 @@
 
 #define INPUT_CHANNELS 3
 #define ALLOW_RANDOM true
-#define DEBUG_DQN false
+#define DEBUG_DQN true
 #define GAMMA 0.9f
 #define EPS_START 0.9f
 #define EPS_END 0.05f
@@ -40,9 +40,9 @@
 #define OPTIMIZER "Adam"
 #define LEARNING_RATE 0.1f
 #define REPLAY_MEMORY 10000
-#define BATCH_SIZE 32
-#define USE_LSTM false
-#define LSTM_SIZE 32
+#define BATCH_SIZE 64
+#define USE_LSTM true
+#define LSTM_SIZE 64
 
 /*
 / TODO - Define Reward Parameters
@@ -265,19 +265,17 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 		/
 		*/
 
-		const bool didArmHitTarget = (strcmp(contacts->contact(i).collision1().c_str(), COLLISION_ITEM) == 0);
-		// (strcmp(contacts->contact(i).collision2().c_str(), COLLISION_POINT) == 0);
+		const bool didSomethingHitTarget = (strcmp(contacts->contact(i).collision1().c_str(), COLLISION_ITEM) == 0);
+		const bool didGripperHit (strcmp(contacts->contact(i).collision2().c_str(), COLLISION_POINT) == 0);
 
-		if (didArmHitTarget)
+		if (didSomethingHitTarget && didGripperHit)
 		{
 			rewardHistory = REWARD_WIN;
-			newReward  = true;
-			endEpisode = true;
 		} else { // There was some other collision
-			rewardHistory = REWARD_WIN;
-			newReward  = true;
-			endEpisode = true;
+			rewardHistory = REWARD_LOSS;
 		}
+		newReward  = true;
+		endEpisode = true;
 		return;
 	}
 }
@@ -587,44 +585,41 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 		/ TODO - set appropriate Reward for robot hitting the ground.
 		/
 		*/
-		
-		
-		/*if(checkGroundContact)
-		{
-						
-			if(DEBUG){printf("GROUND CONTACT, EOE\n");}
 
-			rewardHistory = None;
-			newReward     = None;
-			endEpisode    = None;
+		const bool checkGroundContact = ( gripBBox.min.z <= groundContact || gripBBox.max.z <= groundContact );
+		if (checkGroundContact)
+		{
+			if(DEBUG){printf("GROUND CONTACT, EOE\n");}
+			rewardHistory = REWARD_LOSS;
+			newReward     = true;
+			endEpisode    = true;
 		}
-		*/
+
 		
 		/*
 		/ TODO - Issue an interim reward based on the distance to the object
 		/
 		*/ 
 		
-		/*
+
 		if(!checkGroundContact)
 		{
-			const float distGoal = 0; // compute the reward from distance to the goal
-
+			const float distGoal = BoxDistance(gripBBox, propBBox); // compute the reward from distance to the goal
 			if(DEBUG){printf("distance('%s', '%s') = %f\n", gripper->GetName().c_str(), prop->model->GetName().c_str(), distGoal);}
-
 			
 			if( episodeFrames > 1 )
 			{
 				const float distDelta  = lastGoalDistance - distGoal;
+				const float movingAvgRC  = 0.9f;
 
 				// compute the smoothed moving average of the delta of the distance to the goal
-				avgGoalDelta  = 0.0;
-				rewardHistory = None;
-				newReward     = None;	
+				avgGoalDelta = (avgGoalDelta * movingAvgRC) + (distDelta*(1.0f - movingAvgRC));
+				rewardHistory = avgGoalDelta;
+				newReward     = true;
 			}
 
 			lastGoalDistance = distGoal;
-		} */
+		}
 	}
 
 	// issue rewards and train DQN
