@@ -238,7 +238,7 @@ void ArmPlugin::onCameraMsg(ConstImageStampedPtr &_msg)
 	memcpy(inputBuffer[0], _msg->image().data().c_str(), inputBufferSize);
 	newState = true;
 
-	if(DEBUG){printf("camera %i x %i  %i bpp  %i bytes\n", width, height, bpp, size);}
+	//if(DEBUG){printf("camera %i x %i  %i bpp  %i bytes\n", width, height, bpp, size);}
 
 }
 
@@ -450,7 +450,7 @@ bool ArmPlugin::updateJoints()
 		// update the AI agent when new camera frame is ready
 		episodeFrames++;
 
-		if(DEBUG){printf("episode frame = %i\n", episodeFrames);}
+		//if(DEBUG){printf("episode frame = %i\n", episodeFrames);}
 
 		// reset camera ready flag
 		newState = false;
