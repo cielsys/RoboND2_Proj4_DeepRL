@@ -49,8 +49,8 @@
 /
 */
 
-#define REWARD_WIN  1.0f
-#define REWARD_LOSS -1.0f
+#define REWARD_WIN  50.0f
+#define REWARD_LOSS -50.0f
 
 // Define Object Names
 //#define WORLD_NAME "arm_world"
@@ -316,7 +316,7 @@ bool ArmPlugin::updateAgent()
 
   isDifferentAction = (actionPrevious != action);
   actionPrevious = action;
-	if(isDifferentAction && DEBUG){printf("ArmPlugin - agent selected action %i\n", action);}
+	//if(isDifferentAction && DEBUG){printf("ArmPlugin - agent selected action %i\n", action);}
 
 
 
