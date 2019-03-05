@@ -66,7 +66,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="bash" value="19" />
-          <entry key="cpp" value="484" />
+          <entry key="cpp" value="487" />
           <entry key="gitignore" value="9" />
           <entry key="md" value="198" />
         </counts>
@@ -74,7 +74,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="198" />
-          <entry key="ObjectiveC" value="484" />
+          <entry key="ObjectiveC" value="487" />
           <entry key="PLAIN_TEXT" value="28" />
         </counts>
       </usages-collector>
@@ -88,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="329">
+              <caret line="270" column="32" selection-start-line="270" selection-start-column="32" selection-end-line="270" selection-end-column="32" />
               <folding>
                 <element signature="e#6761#7484#0" expanded="true" />
               </folding>
@@ -146,6 +146,7 @@
       <find>ref</find>
       <find>bpp</find>
       <find>&quot;dist</find>
+      <find>COLLISION_POINT</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -396,8 +397,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="329">
+          <caret line="270" column="32" selection-start-line="270" selection-start-column="32" selection-end-line="270" selection-end-column="32" />
           <folding>
             <element signature="e#6761#7484#0" expanded="true" />
           </folding>

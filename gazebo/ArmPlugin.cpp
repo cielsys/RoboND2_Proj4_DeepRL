@@ -268,7 +268,7 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 		const bool didSomethingHitTarget = (strcmp(contacts->contact(i).collision1().c_str(), COLLISION_ITEM) == 0);
 		const bool didGripperHit (strcmp(contacts->contact(i).collision2().c_str(), COLLISION_POINT) == 0);
 
-		if (didSomethingHitTarget && didGripperHit)
+		if (didSomethingHitTarget)// && didGripperHit)
 		{
 			rewardHistory = REWARD_WIN;
 			newReward  = true;
