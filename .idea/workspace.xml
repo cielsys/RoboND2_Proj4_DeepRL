@@ -66,7 +66,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="bash" value="19" />
-          <entry key="cpp" value="487" />
+          <entry key="cpp" value="516" />
           <entry key="gitignore" value="9" />
           <entry key="md" value="198" />
         </counts>
@@ -74,7 +74,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="198" />
-          <entry key="ObjectiveC" value="487" />
+          <entry key="ObjectiveC" value="516" />
           <entry key="PLAIN_TEXT" value="28" />
         </counts>
       </usages-collector>
@@ -88,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="270" column="32" selection-start-line="270" selection-start-column="32" selection-end-line="270" selection-end-column="32" />
+            <state relative-caret-position="407">
+              <caret line="613" column="54" selection-start-line="613" selection-start-column="54" selection-end-line="613" selection-end-column="54" />
               <folding>
                 <element signature="e#6761#7484#0" expanded="true" />
               </folding>
@@ -397,8 +397,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="270" column="32" selection-start-line="270" selection-start-column="32" selection-end-line="270" selection-end-column="32" />
+        <state relative-caret-position="407">
+          <caret line="613" column="54" selection-start-line="613" selection-start-column="54" selection-end-line="613" selection-end-column="54" />
           <folding>
             <element signature="e#6761#7484#0" expanded="true" />
           </folding>

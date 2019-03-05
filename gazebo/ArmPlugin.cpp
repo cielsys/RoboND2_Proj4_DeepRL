@@ -49,8 +49,8 @@
 /
 */
 
-#define REWARD_WIN  400.0f
-#define REWARD_LOSS -400.0f
+#define REWARD_WIN  20.0f
+#define REWARD_LOSS -20.0f
 
 // Define Object Names
 //#define WORLD_NAME "arm_world"
@@ -66,7 +66,7 @@
 #define ANIMATION_STEPS 1000
 
 // Set Debug Mode
-#define DEBUG true
+#define DEBUG false
 
 // Lock base rotation DOF (Add dof in header file if off)
 #define LOCKBASE true
@@ -588,8 +588,8 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 		/
 		*/
 
-		const bool checkGroundContact = ( gripBBox.min.z <= groundContact || gripBBox.max.z <= groundContact );
-		if (checkGroundContact)
+		const bool didHitGround = ( gripBBox.min.z <= groundContact || gripBBox.max.z <= groundContact );
+		if (didHitGround)
 		{
 			if(DEBUG){printf("GROUND CONTACT, EOE\n");}
 			rewardHistory = REWARD_LOSS;
@@ -604,7 +604,7 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 		*/ 
 		
 
-		if(!checkGroundContact)
+		if(!didHitGround)
 		{
 			const float distGoal = BoxDistance(gripBBox, propBBox); // compute the reward from distance to the goal
 			//if(DEBUG){printf("distance('%s', '%s') = %f\n", gripper->GetName().c_str(), prop->model->GetName().c_str(), distGoal);}
@@ -612,9 +612,9 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 			if( episodeFrames > 1 )
 			{
 				const float distDelta  = lastGoalDistance - distGoal;
-				const float movingAvgRC  = 0.5f;
-				const float progressRewardFactor  = 10.0f;
-				const float lingerPushisment  = 1.0f;
+				const float movingAvgRC  = 0.4f;
+				const float progressRewardFactor  = 4.0f;
+				const float lingerPushisment  = 0.25f;
 
 				// compute the smoothed moving average of the delta of the distance to the goal
 				avgGoalDelta = (avgGoalDelta * movingAvgRC) + (distDelta*(1.0f - movingAvgRC));
