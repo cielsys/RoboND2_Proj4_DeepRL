@@ -88,8 +88,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="657" column="9" lean-forward="true" selection-start-line="657" selection-start-column="9" selection-end-line="657" selection-end-column="9" />
+            <state relative-caret-position="736">
+              <caret line="661" column="1" lean-forward="true" selection-start-line="661" selection-start-column="1" selection-end-line="661" selection-end-column="1" />
+              <folding>
+                <element signature="e#8711#9432#0" expanded="true" />
+                <element signature="e#10307#10809#0" expanded="true" />
+                <element signature="e#13855#14083#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -395,8 +400,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="657" column="9" lean-forward="true" selection-start-line="657" selection-start-column="9" selection-end-line="657" selection-end-column="9" />
+        <state relative-caret-position="736">
+          <caret line="661" column="1" lean-forward="true" selection-start-line="661" selection-start-column="1" selection-end-line="661" selection-end-column="1" />
+          <folding>
+            <element signature="e#8711#9432#0" expanded="true" />
+            <element signature="e#10307#10809#0" expanded="true" />
+            <element signature="e#13855#14083#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
