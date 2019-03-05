@@ -38,7 +38,7 @@
 #define INPUT_WIDTH   64
 #define INPUT_HEIGHT  64
 #define OPTIMIZER "RMSprop"
-#define LEARNING_RATE 0.01f
+#define LEARNING_RATE 0.05f
 #define REPLAY_MEMORY 10000
 #define BATCH_SIZE 64
 #define USE_LSTM true
@@ -49,8 +49,8 @@
 /
 */
 
-#define REWARD_WIN  20.0f
-#define REWARD_LOSS -20.0f
+#define REWARD_WIN  1.0f
+#define REWARD_LOSS -1.0f
 
 // Define Object Names
 //#define WORLD_NAME "arm_world"
@@ -275,9 +275,9 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 			endEpisode = true;
 			return;
 		} else { // There was some other collision
-			rewardHistory = REWARD_LOSS;
-			newReward  = true;
-			endEpisode = true;
+			//rewardHistory = REWARD_LOSS;
+			//newReward  = true;
+			//endEpisode = true;
 		}
 	}
 }
@@ -363,7 +363,7 @@ bool ArmPlugin::updateAgent()
 	*/
 	const int jointIndex = action / 2;
 	float curJointAngle = ref[jointIndex];
-	const int actionDir = ((action % 2 == 0) ? 1 : -1); // 1=even, -1=odd
+	const int actionDir = ((action % 2 == 0) ? 1.0f : -1.0f); // 1=even, -1=odd
 	float joint = curJointAngle + actionJointDelta * actionDir;
 
 	// limit the joint to the specified range
@@ -581,14 +581,14 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 
 		// get the bounding box for the gripper		
 		const math::Box& gripBBox = gripper->GetBoundingBox();
-		const float groundContact = 0.0f;
+		const float groundContact = 0.5f;
 		
 		/*
 		/ TODO - set appropriate Reward for robot hitting the ground.
 		/
 		*/
 
-		const bool didHitGround = ( gripBBox.min.z <= groundContact || gripBBox.max.z <= groundContact );
+		const bool didHitGround = ( gripBBox.min.z <= groundContact);
 		if (didHitGround)
 		{
 			if(DEBUG){printf("GROUND CONTACT, EOE\n");}
@@ -614,11 +614,11 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 				const float distDelta  = lastGoalDistance - distGoal;
 				const float movingAvgRC  = 0.4f;
 				const float progressRewardFactor  = 4.0f;
-				const float lingerPushisment  = 0.25f;
+				const float lingerPunishment  = 0.25f;
 
 				// compute the smoothed moving average of the delta of the distance to the goal
 				avgGoalDelta = (avgGoalDelta * movingAvgRC) + (distDelta*(1.0f - movingAvgRC));
-				rewardHistory = avgGoalDelta * progressRewardFactor - lingerPushisment;
+				rewardHistory = avgGoalDelta; // * progressRewardFactor - lingerPunishment;
 				newReward     = true;
 			}
 

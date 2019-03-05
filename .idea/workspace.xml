@@ -66,7 +66,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="bash" value="19" />
-          <entry key="cpp" value="516" />
+          <entry key="cpp" value="552" />
           <entry key="gitignore" value="9" />
           <entry key="md" value="198" />
         </counts>
@@ -74,7 +74,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="198" />
-          <entry key="ObjectiveC" value="516" />
+          <entry key="ObjectiveC" value="552" />
           <entry key="PLAIN_TEXT" value="28" />
         </counts>
       </usages-collector>
@@ -88,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="613" column="54" selection-start-line="613" selection-start-column="54" selection-end-line="613" selection-end-column="54" />
+            <state relative-caret-position="718">
+              <caret line="279" column="8" selection-start-line="279" selection-start-column="8" selection-end-line="279" selection-end-column="8" />
               <folding>
                 <element signature="e#6761#7484#0" expanded="true" />
               </folding>
@@ -205,9 +205,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../junk/Danny/gazebo/ArmPlugin.cpp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../junk/Danny/gazebo/ArmPlugin.cpp" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -313,12 +314,12 @@
     <frame x="3995" y="0" width="1736" height="1456" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7021053" visible="true" weight="0.21488595" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7021053" visible="true" weight="0.21488595" />
       <window_info id="Structure" order="1" sideWeight="0.29789475" side_tool="true" weight="0.21133412" />
       <window_info id="Favorites" order="2" sideWeight="0.29789475" side_tool="true" visible="true" weight="0.21488595" />
       <window_info anchor="bottom" id="CMake" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.2686682" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.2686682" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -397,8 +398,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="613" column="54" selection-start-line="613" selection-start-column="54" selection-end-line="613" selection-end-column="54" />
+        <state relative-caret-position="718">
+          <caret line="279" column="8" selection-start-line="279" selection-start-column="8" selection-end-line="279" selection-end-column="8" />
           <folding>
             <element signature="e#6761#7484#0" expanded="true" />
           </folding>
