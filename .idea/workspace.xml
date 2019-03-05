@@ -66,7 +66,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="bash" value="19" />
-          <entry key="cpp" value="586" />
+          <entry key="cpp" value="587" />
           <entry key="gitignore" value="9" />
           <entry key="md" value="198" />
         </counts>
@@ -74,7 +74,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="198" />
-          <entry key="ObjectiveC" value="586" />
+          <entry key="ObjectiveC" value="587" />
           <entry key="PLAIN_TEXT" value="28" />
         </counts>
       </usages-collector>
@@ -88,12 +88,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+            <state relative-caret-position="439">
+              <caret line="646" lean-forward="true" selection-start-line="646" selection-end-line="646" />
               <folding>
-                <element signature="e#8711#9432#0" expanded="true" />
-                <element signature="e#10307#10809#0" expanded="true" />
-                <element signature="e#13855#14083#0" expanded="true" />
+                <element signature="e#8737#9455#0" expanded="true" />
+                <element signature="e#10330#10829#0" expanded="true" />
+                <element signature="e#13875#14102#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -400,12 +400,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+        <state relative-caret-position="439">
+          <caret line="646" lean-forward="true" selection-start-line="646" selection-end-line="646" />
           <folding>
-            <element signature="e#8711#9432#0" expanded="true" />
-            <element signature="e#10307#10809#0" expanded="true" />
-            <element signature="e#13855#14083#0" expanded="true" />
+            <element signature="e#8737#9455#0" expanded="true" />
+            <element signature="e#10330#10829#0" expanded="true" />
+            <element signature="e#13875#14102#0" expanded="true" />
           </folding>
         </state>
       </provider>

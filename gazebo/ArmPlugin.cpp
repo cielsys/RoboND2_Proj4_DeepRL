@@ -1,4 +1,4 @@
-/* 
+/*
  * Author - Dustin Franklin (Nvidia Jetson Developer)
  * Modified by - Sahil Juneja, Kyle Stewart-Frantz
  *
@@ -38,7 +38,7 @@
 #define INPUT_WIDTH   64
 #define INPUT_HEIGHT  64
 #define OPTIMIZER "RMSprop"
-#define LEARNING_RATE 0.1f // Task1=0.001f Task2=0.1
+#define LEARNING_RATE 0.05f // Task1=0.001f Task2=0.1
 #define REPLAY_MEMORY 10000
 #define BATCH_SIZE 64
 #define USE_LSTM true
