@@ -612,15 +612,13 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 			if( episodeFrames > 1 )
 			{
 				const float distDelta  = lastGoalDistance - distGoal;
-				const float movingAvgRC  = 0.8f;
+				const float movingAvgRC  = 0.5f;
+				const float progressRewardFactor  = 10.0f;
+				const float lingerPushisment  = 1.0f;
 
 				// compute the smoothed moving average of the delta of the distance to the goal
 				avgGoalDelta = (avgGoalDelta * movingAvgRC) + (distDelta*(1.0f - movingAvgRC));
-				rewardHistory = avgGoalDelta;
-				if(abs(avgGoalDelta)<0.01f)
-				{
-					rewardHistory += -0.5;
-				}
+				rewardHistory = avgGoalDelta * progressRewardFactor - lingerPushisment;
 				newReward     = true;
 			}
 
