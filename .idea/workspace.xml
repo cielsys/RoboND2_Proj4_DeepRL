@@ -66,7 +66,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="bash" value="19" />
-          <entry key="cpp" value="481" />
+          <entry key="cpp" value="484" />
           <entry key="gitignore" value="9" />
           <entry key="md" value="198" />
         </counts>
@@ -74,7 +74,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="198" />
-          <entry key="ObjectiveC" value="481" />
+          <entry key="ObjectiveC" value="484" />
           <entry key="PLAIN_TEXT" value="28" />
         </counts>
       </usages-collector>
@@ -88,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="621" selection-start-line="621" selection-end-line="621" />
+            <state relative-caret-position="605">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="e#6761#7484#0" expanded="true" />
               </folding>
@@ -396,8 +396,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gazebo/ArmPlugin.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="621" selection-start-line="621" selection-end-line="621" />
+        <state relative-caret-position="605">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="e#6761#7484#0" expanded="true" />
           </folding>
