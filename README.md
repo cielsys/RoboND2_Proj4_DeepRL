@@ -9,10 +9,6 @@ It is for the "Deep reinforcement" robotic arm ros project,
 the fourth project of Udacity Robotic Engineer ND, Term2.
 
 ## Submission notes
-NOTE: This repo contains more than just the Catkin source directory!
-The ROS source directory is <br>
-$REPO/catkin_ws/src
-
 The project report is [report.pdf](./report/report.pdf)<br/>
 
 ## Robot learning goals:
